@@ -17,33 +17,26 @@ function draw() {
   var posX = 0;
   var posY = 0;
   
-  var K = 5; // density
+  var K = 15; // density
   var golden_ratio = 1.168034;
   
   // var C = TWO_PI / 3.14; // divergence
-  // var C = sqrt(5);
-  var C = TWO_PI / 1.168034;
-  // var C = 1.168034;
-  var A = 50;
+  var C = sqrt(5);
+  var A = 1;
   var R = 1;
 
-  for (var s = 1; s < 10; s++) {
+  for (var s = 0; s < 600; s++) {
     R = K * sqrt(A);
-    ellipse(A, R, 10, 10)
-    /*
-    for (var t = 0; t < 6; t++){
+    for (var t = 0; t < 3; t++){
       var AA = TWO_PI*t/6 + A;
-      var RR = 5;
+      var RR = 1;
 
       posX = RR*cos(AA) + R*cos(A);
       posY = RR*sin(AA) + R*sin(A);
 
       // star (mouseX, mouseY, 20, 40, 5);
-      // star (posX, posY, t*2, 2*(t+2), 5);
-      // ellipse (posX, posY, (s/10)+1, (s/10)+1);
-      ellipse(posX, posY, 10, 10);
+      star (posX, posY, t*2, 2*(t+2), 5);
     }
-    */
     A = A + C;
   }
 
